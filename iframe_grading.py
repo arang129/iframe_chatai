@@ -21,7 +21,7 @@ def setup_iframe_grading():
         'launcher_entry': {
             'enabled': True,
             'icon_path': '/opt/tljh/hub/share/jupyterhub/yuntech.svg',
-            'title': '上課講義',
+            'title': '繳交作業',
         },
     }
 
