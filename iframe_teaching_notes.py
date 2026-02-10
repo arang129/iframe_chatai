@@ -12,15 +12,15 @@ __version__ = '0.038'
 # This is the entry point for jupyter-server-proxy . The packaging metadata
 # tells it about this function. For details, see:
 # https://jupyter-server-proxy.readthedocs.io/en/latest/server-process.html
-def setup_jupyterpgweb():
+def setup_iframe_teaching_notes():
     # Using a Unix socket prevents other users on a multi-user system from accessing
     # our server. The alternative is a TCP socket ('-p', '{port}').
     return {
-        'command': [sys.executable, '-m', 'jupyterpgweb', '-u', '{unix_socket}'],
+        'command': [sys.executable, '-m', 'iframe_teaching_notes', '-u', '{unix_socket}'],
         'unix_socket': True,
         'launcher_entry': {
             'enabled': True,
-            'icon_path': '/opt/tljh/hub/share/jupyterhub/jupyterpgweb.svg',
+            'icon_path': '/opt/tljh/hub/share/jupyterhub/eclass.svg',
             'title': 'pgweb',
         },
     }
