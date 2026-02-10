@@ -21,7 +21,7 @@ def setup_iframe_teaching_notes():
         'launcher_entry': {
             'enabled': True,
             'icon_path': '/opt/tljh/hub/share/jupyterhub/eclass.svg',
-            'title': 'pgweb',
+            'title': '上課講義',
         },
     }
 
