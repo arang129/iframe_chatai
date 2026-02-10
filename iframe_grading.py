@@ -12,7 +12,7 @@ __version__ = '0.038'
 # This is the entry point for jupyter-server-proxy . The packaging metadata
 # tells it about this function. For details, see:
 # https://jupyter-server-proxy.readthedocs.io/en/latest/server-process.html
-def setup_iframe_teaching_notes():
+def setup_iframe_grading():
     # Using a Unix socket prevents other users on a multi-user system from accessing
     # our server. The alternative is a TCP socket ('-p', '{port}').
     return {
@@ -20,7 +20,7 @@ def setup_iframe_teaching_notes():
         'unix_socket': True,
         'launcher_entry': {
             'enabled': True,
-            'icon_path': '/opt/tljh/hub/share/jupyterhub/eclass.svg',
+            'icon_path': '/opt/tljh/hub/share/jupyterhub/yuntech.svg',
             'title': '上課講義',
         },
     }
@@ -69,7 +69,7 @@ TEMPLATE = """\
 <html>
 <head>
     <title>pgweb</title>
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1180/1180877.png">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/12404/12404306.png">
     
     <style>
         body {{
@@ -80,7 +80,7 @@ TEMPLATE = """\
     </style>
 </head>
 <body>
-    <iframe src="https://jupyter2.yunlab.app/services/teaching-notes/" 
+    <iframe src="https://jupyter2.yunlab.app/services/grading/" 
             style="width: 100vw; height: 100vh; border: none;">
     </iframe>
 </body>
