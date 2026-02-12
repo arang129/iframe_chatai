@@ -12,16 +12,16 @@ __version__ = '0.038'
 # This is the entry point for jupyter-server-proxy . The packaging metadata
 # tells it about this function. For details, see:
 # https://jupyter-server-proxy.readthedocs.io/en/latest/server-process.html
-def setup_iframe_yfinanceboard():
+def setup_iframe_chatai():
     # Using a Unix socket prevents other users on a multi-user system from accessing
     # our server. The alternative is a TCP socket ('-p', '{port}').
     return {
-        'command': [sys.executable, '-m', 'iframe_yfinanceboard', '-u', '{unix_socket}'],
+        'command': [sys.executable, '-m', 'iframe_chatai', '-u', '{unix_socket}'],
         'unix_socket': True,
         'launcher_entry': {
             'enabled': True,
-            'icon_path': '/opt/tljh/hub/share/jupyterhub/stockboard.svg',
-            'title': '市場觀測',
+            'icon_path': '/opt/tljh/hub/share/jupyterhub/chatai_logo.svg',
+            'title': 'ChatAI',
         },
     }
 
@@ -68,8 +68,8 @@ TEMPLATE = """\
 <!DOCTYPE html>
 <html>
 <head>
-    <title>pgweb</title>
-    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/8/8f/Yahoo%21_Finance_logo_2021.png">
+    <title>ChatAI</title>
+    <link rel="icon" type="image/png" href="https://png.pngtree.com/templates/sm/20180519/sm_5b001cfa899b9.jpg">
     
     <style>
         body {{
@@ -80,7 +80,7 @@ TEMPLATE = """\
     </style>
 </head>
 <body>
-    <iframe src="https://jupyter.yunlab.app/services/yfinanceboard/" 
+    <iframe src="https://jupyter2.yunlab.app/services/chatai/" 
             style="width: 100vw; height: 100vh; border: none;">
     </iframe>
 </body>
