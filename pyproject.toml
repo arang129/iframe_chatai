@@ -3,7 +3,7 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "iframe_yfinanceboard"
+name = "iframe_chatai"
 authors = [{name = "Thomas Kluyver", email = "thomas@kluyver.me.uk"}]
 readme = "README.rst"
 license = {file = "LICENSE"}
@@ -12,7 +12,7 @@ dependencies = ["jupyter-server-proxy >=4.0"]  # v4 required for Unix socket sup
 dynamic = ["version", "description"]
 
 [project.urls]
-Home = "https://github.com/arang129/iframe_yfinanceboard"
+Home = "https://github.com/arang129/iframe_chatai"
 
 [project.entry-points.jupyter_serverproxy_servers]
-iframe_yfinanceboard = "iframe_yfinanceboard:setup_iframe_yfinanceboard"
+iframe_chatai = "iframe_chatai:setup_iframe_chatai"
